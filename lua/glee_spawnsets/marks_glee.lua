@@ -52,8 +52,41 @@ local markSpawnSet = {
             maxCount = { 5 },
             postSpawnedFuncs = nil,
         },
+        {
+            hardRandomChance = nil,
+            name = "marksmol",
+            prettyName = "A Mark (Small)",
+            class = "terminator_nextbot_markinator_smol",
+            spawnType = "hunter",
+            difficultyCost = { 10, 20 },
+            countClass = "terminator_nextbot_markinator*",
+            maxCount = { 8 },
+            postSpawnedFuncs = nil,
+        },
+        {
+            hardRandomChance = { 20, 100 },
+            name = "markwraith",
+            prettyName = "A Mark (Wraith)",
+            class = "terminator_nextbot_markinator_wraith",
+            spawnType = "hunter",
+            difficultyCost = { 15, 25 },
+            countClass = "terminator_nextbot_markinator*",
+            maxCount = { 6 },
+            postSpawnedFuncs = nil,
+        },
+        {
+            hardRandomChance = { 60, 100 },
+            name = "markhuge",
+            prettyName = "A Mark (Huge)",
+            class = "terminator_nextbot_markinator_huge",
+            spawnType = "hunter",
+            difficultyCost = { 200 },
+            difficultyNeeded = { 250 },
+            countClass = "terminator_nextbot_markinator*",
+            maxCount = { 1 },
+            postSpawnedFuncs = nil,
+        },
     }
 }
 
 table.insert( GLEE_SPAWNSETS, markSpawnSet )
-
