@@ -1,4 +1,3 @@
-
 local genericMarkCounter = "terminator_nextbot_markinator*"
 
 local spawnSet = {
@@ -51,9 +50,20 @@ local spawnSet = {
             maxCount = { 4 },
             postSpawnedFuncs = nil,
         },
+        {
+            hardRandomChance = { 85, 100 },
+            name = "markhuge",
+            prettyName = "A Mark (Huge)",
+            class = "terminator_nextbot_markinator_huge",
+            spawnType = "hunter",
+            difficultyCost = { 200 },
+            difficultyNeeded = { 250 },
+            countClass = genericMarkCounter,
+            maxCount = { 1 },
+            postSpawnedFuncs = nil,
+            isBoss = true,
+        },
     }
 }
 
 table.insert( GLEE_SPAWNSETS, spawnSet )
-
-
