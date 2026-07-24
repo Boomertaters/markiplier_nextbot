@@ -5,19 +5,11 @@ ENT.Base = "terminator_nextbot_markinator_plier"
 DEFINE_BASECLASS( ENT.Base )
 ENT.PrintName = "Mark (Wraith)"
 ENT.Spawnable = false
-list.Set( "NPC", "terminator_nextbot_markinator_wraith", {
-    Name = "Mark (Wraith)",
-    Class = "terminator_nextbot_markinator_wraith",
-    Category = "Terminator Nextbot",
-} )
+terminator_Extras.RegisterNPC( "terminator_nextbot_markinator_wraith", ENT )
 
-if CLIENT then
-    language.Add( "terminator_nextbot_markinator_wraith", ENT.PrintName )
-    return
+if CLIENT then return end
 
-end
-
-ENT.SpawnHealth = 365
+ENT.SpawnHealth = 150
 ENT.HealthRegen = 10
 ENT.HealthRegenInterval = 0.5
 
