@@ -5,17 +5,9 @@ ENT.Base = "terminator_nextbot_markinator"
 DEFINE_BASECLASS( ENT.Base )
 ENT.PrintName = "Mark (Angry)"
 ENT.Spawnable = false
-list.Set( "NPC", "terminator_nextbot_markinator_angry", {
-    Name = "Mark (Angry)",
-    Class = "terminator_nextbot_markinator_angry",
-    Category = "Terminator Nextbot",
-} )
+terminator_Extras.RegisterNPC( "terminator_nextbot_markinator_angry", ENT )
 
-if CLIENT then
-    language.Add( "terminator_nextbot_markinator_angry", ENT.PrintName )
-    return
-
-end
+if CLIENT then return end
 
 ENT.IsFodder = false
 ENT.CoroutineThresh = terminator_Extras.baseCoroutineThresh / 1
@@ -32,4 +24,3 @@ function ENT:IsReallyAngry()
 
 
 end
-
