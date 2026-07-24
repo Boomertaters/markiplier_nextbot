@@ -37,6 +37,28 @@ local markSpawnSet = {
             postSpawnedFuncs = nil,
         },
         {
+            hardRandomChance = { 10, 20 },
+            name = "marksmolglee",
+            prettyName = "The Mark (Small)",
+            class = "terminator_nextbot_markinator_smol",
+            spawnType = "hunter",
+            difficultyCost = { 10, 20 },
+            countClass = "terminator_nextbot_markinator*",
+            maxCount = 1,
+            postSpawnedFuncs = nil,
+        },
+        {
+            hardRandomChance = { 10, 20 },
+            name = "markwraithglee",
+            prettyName = "The Mark (Wraith)",
+            class = "terminator_nextbot_markinator_wraith",
+            spawnType = "hunter",
+            difficultyCost = { 30, 45 },
+            countClass = "terminator_nextbot_markinator*",
+            maxCount = 1,
+            postSpawnedFuncs = nil,
+        },
+        {
             hardRandomChance = nil,
             name = "markiplierglee",
             prettyName = "The Markiplier",
@@ -46,6 +68,18 @@ local markSpawnSet = {
             countClass = "terminator_nextbot_markinator*",
             maxCount = 1,
             postSpawnedFuncs = nil,
+        },
+        {
+            name = "markhugeglee",
+            prettyName = "The Mark (Huge)",
+            class = "terminator_nextbot_markinator_huge",
+            spawnType = "hunter",
+            difficultyNeeded = 250, -- always spawn
+            difficultyCost = 200,
+            countClass = "terminator_nextbot_markinator*",
+            maxCount = 1,
+            postSpawnedFuncs = nil,
+            isBoss = true,
         },
     }
 }
