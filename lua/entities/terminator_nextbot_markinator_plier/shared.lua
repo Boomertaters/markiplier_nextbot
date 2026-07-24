@@ -10,11 +10,8 @@ DEFINE_BASECLASS( ENT.Base )
 ENT.PrintName = "Markiplier"
 ENT.Spawnable = false
 ENT.Author = "Boomertaters"
-list.Set( "NPC", "terminator_nextbot_markinator_plier", {
-    Name = "Markiplier",
-    Class = "terminator_nextbot_markinator_plier",
-    Category = "Terminator Nextbot",
-} )
+ENT.SubCategory = "The Marks"
+terminator_Extras.RegisterNPC( "terminator_nextbot_markinator_plier", ENT )
 
 ENT.MySpecialActions = { -- binds 
     ["markinator_speak"] = {
@@ -78,8 +75,8 @@ ENT.CanSpeak = true
 ENT.NextTermSpeak = 0
 
 ENT.FistDamageMul = 1.5
-ENT.SpawnHealth = 1250
-ENT.HealthRegen = 1.5
+ENT.SpawnHealth = 1000
+ENT.HealthRegen = 2
 ENT.HealthRegenInterval = 0.30
 
 ENT.MetallicMoveSounds = false
@@ -312,5 +309,4 @@ ENT.MyClassTask = {
         end
     end,
 }
-
 
