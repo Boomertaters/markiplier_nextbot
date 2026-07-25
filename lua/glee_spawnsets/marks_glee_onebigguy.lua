@@ -18,7 +18,7 @@ local markSpawnSet = {
         {
             name = "mark_HUGE",
             prettyName = "The Huge Mark",
-            class = "terminator_nextbot_markinatorhuge",
+            class = "terminator_nextbot_markinator_huge",
             spawnType = "hunter",
             difficultyCost = 1,
             countClass = "terminator_nextbot_markinator*",
