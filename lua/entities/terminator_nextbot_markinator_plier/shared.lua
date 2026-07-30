@@ -203,18 +203,8 @@ ENT.MyClassTask = {
 
     end,
     OnAnger = function( self, data )
-        self.mark_nextRareAngry = CurTime() + math.random( 10, 20 )
         self:mark_SpeakARandomSound( "anger" )
 
-    end,
-    OnReallyAnger = function( self, data )
-        self.mark_nextRareAngry = CurTime() + math.random( 10, 20 )
-        timer.Simple( 0.1, function()
-            if not IsValid( self ) then return end
-            self:Term_SpeakSoundNow( randomMarkSoundPath( "anger" ) )
-            self:mark_SpeakARandomSound( "anger" )
-
-        end )
     end,
     OnKillEnemy = function( self, data )
         local path = randomMarkSoundPath( "killed" )
