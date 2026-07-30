@@ -18,9 +18,3 @@ function ENT:IsAngry()
     return true
 
 end
-
-function ENT:IsReallyAngry()
-    return true -- always angry
-
-
-end
