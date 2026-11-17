@@ -27,40 +27,13 @@ ENT.MySpecialActions = { -- binds
     }
 }
 
--- everything below here is basically copied from the jerma985 nextbot
-if CLIENT then
-    language.Add( "terminator_nextbot_markinator_plier", ENT.PrintName )
+ENT.MyWorkshopContentIds = {
+    "3649571290", -- sounds
+    "3151172526", -- playermodel
+    
+}
 
-    local contentVar = GetConVar( "markiplier_nextbot_dynamiccontent" )
-    local gotBOTContent
-    local gotPMContent
-    local attempts = 0
-
-    function ENT:AdditionalClientInitialize() -- people who join in with this already spawned are screwed lol
-        if not contentVar:GetBool() then return end
-
-        if attempts >= 2 then return end -- just in case
-
-        if not gotBOTContent then
-            attempts = attempts + 1
-            steamworks.DownloadUGC( "3649571290", function( path )
-                if not path then return end
-                gotBOTContent = game.MountGMA( path )
-
-            end )
-        end
-        if not gotPMContent then
-            attempts = attempts + 1
-            steamworks.DownloadUGC( "3151172526", function( path )
-                if not path then return end
-                gotPMContent = game.MountGMA( path )
-
-            end )
-        end
-    end
-    return
-
-end
+if CLIENT then return end
 
 local MARKINATOR_MODEL = "models/humans/gfreakman/markiplier.mdl"
 ENT.ARNOLD_MODEL = MARKINATOR_MODEL
