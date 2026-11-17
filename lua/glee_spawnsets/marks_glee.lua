@@ -1,7 +1,3 @@
-if game.IsDedicated() then
-    RunConsoleCommand( "markiplier_nextbot_dynamiccontent", 1 )
-
-end
 
 local markSpawnSet = {
     name = "marks_glee", -- unique name
